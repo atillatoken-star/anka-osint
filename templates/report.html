@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnkaOSINT Raporu</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>AnkaOSINT</h1>
+        <p>Profesyonel OSINT Analiz Raporu</p>
+    </header>
+
+    <div class="grid">
+
+        <div class="card">
+            <span class="label">HEDEF</span>
+            <h2>{{ target }}</h2>
+        </div>
+
+        <div class="card">
+            <span class="label">IP ADRESİ</span>
+            <h2>{{ ip }}</h2>
+        </div>
+
+        <div class="card">
+            <span class="label">REGISTRAR</span>
+            <h2>{{ registrar }}</h2>
+        </div>
+
+        <div class="card">
+            <span class="label">SSL DURUMU</span>
+            <h2>{{ ssl_status }}</h2>
+        </div>
+
+    </div>
+
+    <section class="section">
+        <h3>DNS Kayıtları</h3>
+        <pre>{{ dns_json }}</pre>
+    </section>
+
+    <section class="section">
+        <h3>HTTP Başlıkları</h3>
+        <pre>{{ headers_json }}</pre>
+    </section>
+
+    <footer>
+        Oluşturulma: {{ generated_at }}
+    </footer>
+
+</div>
+
+</body>
+</html>
