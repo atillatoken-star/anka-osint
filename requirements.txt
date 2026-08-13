@@ -1,7 +1,0 @@
-
-rich
-requests
-dnspython
-python-whois
-beautifulsoup4
-jinja2
